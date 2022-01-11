@@ -115,6 +115,26 @@ def glases():
     plt.xlabel('x')
     plt.grid(True)
     plt.show()
+def zont():
+    x1=np.arange(-12,12,0.5)
+    y1=(-1/18)*x1*x1+12
+    x2=np.arange(-4,4,0.5)
+    y2=(-1/8)*x2*x2+6
+    x3=np.arange(-12,-4,0.5)
+    y3=(-1/8)*(x3+8)**2+6
+    x4=np.arange(4,12,0.5)
+    y4=(-1/8)*(x4-8)**2+6
+    x5=np.arange(-4,-0.3,0.5)
+    y5=2*(x5+3)**2-9
+    x6=np.arange(-4,0.2,0.5)
+    y6=1.5*(x6+3)**2-10
+    fig = plt.figure()
+    plt.plot(x1,y1,x2,y2,x3,y3,x4,y4,x5,y5,x6,y6)
+    plt.title('Зонтик')
+    plt.ylabel('y')
+    plt.xlabel('x')
+    plt.grid(True)
+    plt.show()
 aken=Tk()
 aken.geometry("620x200")
 aken.title("Квадратные уравнения")
@@ -136,7 +156,7 @@ y=Label(aken,text="=0",font="Calibri 26", fg="green")
 y.pack(side=LEFT)
 Rd=Radiobutton(aken,text="Кит",font="Calibri 26", fg="green",command=kit)
 Rd2=Radiobutton(aken,text="Очки",font="Calibri 26", fg="green",command=glases)
-Rd3=Radiobutton(aken,text="Зонтик",font="Calibri 26", fg="green")
+Rd3=Radiobutton(aken,text="Зонтик",font="Calibri 26", fg="green",command=zont)
 Rd4=Radiobutton(aken,text="Бабочка",font="Calibri 26", fg="green")
 Rd5=Radiobutton(aken,text="Лягушка",font="Calibri 26", fg="green")
 knopka=Button(aken,text="Решить", font="Calibri 26",bg="green",command=lahenda)
